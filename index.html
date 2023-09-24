@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="icon" href="Main_files/Icons/Tab_icon.ico" type="image/x-icon">
+    <title>КУРСАЧ</title>
+    <style>
+        @font-face { /*Добавка шрифтов в различных начертаниях*/
+        font-family: 'Archangelsk';
+        font-style:normal;
+        font-weight: 400;
+        src: url('Main_files/Fonts/Archangelsk/Archangelsk_Regular.ttf') format('truetype');
+        }
+        
+        @font-face { 
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 800;
+            src: url('Main_files/Fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            src: url('Main_files/Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 100;
+            src: url('Main_files/Fonts/Roboto/Roboto-Light.ttf') format('truetype');
+        }
+        body
+        {
+            margin: 0;
+        }
+        .swiper
+        {
+            width:100%;
+            height:1000px;
+        }
+        .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        a{
+            text-decoration: none;
+        }
+        strong{
+            color:#52bedc;
+        }
+        ul{
+            list-style-type:none;
+            list-style-image:url(Main_files/diskcase.svg);
+        }
+        header {
+            top: 21px;
+            z-index: 2;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+        }
+        img#Logo {
+            margin-left: 16.8%;
+        }
+        div.soc_medias{
+            margin-right: 280px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        div.soc_medias a{
+            padding: 0 11.6% 0;
+        }
+        .slider_message{
+            z-index: 2;
+            left: 51%;
+            top: 63.2%;
+            position: absolute;
+            height: 368px;
+            width: 625px;
+            background-color: #F8F200;
+            clip-path: polygon(0% 14%, 8% 0%, 100% 0%, 100% 86%, 92% 100%, 0% 100%);
+        }
+        .slider_message div {
+            width: 500px;
+            padding-left: 71px;
+            padding-top: 69px;
+        }
+        .slider_message h1
+        {
+            margin: 0 0 25px;
+            font-size: 60px;
+            letter-spacing: 1px;
+            line-height: 63px;
+            font-family: 'Archangelsk';
+            font-weight: 500;
+        }
+        .slider_message a{
+            float: left;
+            font-size: 24px;
+            font-family: 'Roboto';
+            font-weight: 800;
+            font-style: normal;
+            border: black solid 24px;
+            background-color: black;
+            color: #F8F200;
+            padding: 0 26px 0;
+        }
+        .footer_first_block
+        {
+            display: flex;
+            align-items: center;
+        }
+        .footer_first_block #footer_logo:nth-child(1)
+        {
+            margin-left: 320px;
+        }
+        .footer_first_block #footer_logo
+        {
+            padding:0 20px 0 0;
+        }
+        .block_night_city
+        {
+            margin-top: 71px;
+            background-color: white;
+            margin-left: 16.85%;
+        }
+        .block_night_city h1
+        {
+            font-family: 'Archangelsk';
+            font-size: 63px;
+            font-weight: 100;
+            letter-spacing: -0.5px;
+        }
+        .block_night_city div article
+        {
+            color: gray;
+            margin-top: -18px;
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-weight: 400;
+            width: 60%;
+            line-height: 34px;
+        }
+        .night_city_images
+        {
+            margin-top: 3.7%;
+            display: flex;
+            justify-content: start;
+        }
+        .left_images
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .left_images img
+        {
+            clip-path: polygon(0% 25%, 11% 0%, 100% 0%, 100% 73%, 89% 100%, 0% 100%);
+        }
+        .left_images img:nth-child(2)
+        { 
+            margin-top: 30px;
+        }
+        [alt="town photo3"]
+        {
+            clip-path: polygon(0% 18%, 10% 0%, 100% 0%, 100% 88%, 94% 100%, 0% 100%);
+            padding-left: 32px;
+        }
+        [alt="transition white-black"]
+        {
+            margin-top: 69px;
+            width:100%;
+        }
+        [alt="transition black-yellow"]
+        {
+            width: 100%;
+            margin-bottom: -5px;
+        }
+        .contest_block
+        {
+            color:white;
+            padding: 15px 320px 0;
+        }
+        .input-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 33px;
+        }
+        .input-container input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #777;
+        color: lightgray;
+        background: none;
+        padding-bottom: 16px;
+        }
+        .input-container input {
+            margin-bottom: 3px;
+        }
+        .input-container input::placeholder
+        {
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 200;
+        color: lightgray;
+        }
+        .dropzone {
+        text-align: center;
+        border: 2px dashed #ccc;
+        padding: 20px;
+        width:90%;
+        height: 75px;
+        cursor: pointer;
+        transition: border-color 0.3s; /* Добавляем анимацию изменения цвета рамки */
+        }
+        .dropzone:hover {
+            border-color: gray; /* Изменяем цвет рамки при наведении */
+        }
+        .send-button {
+        background-color: #F8F200;
+        color: #000;
+        border: none;
+        margin-top: 35px;
+        padding: 19.5px 50px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: 'Roboto';
+        font-size: 17px;
+        letter-spacing:0.5px;
+        }
+        .send-button:hover {
+        background-color: #000;
+        color: #F8F200;
+        }
+        input[type="checkbox"]::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid black;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+        }
+        input[type="checkbox"]:checked::before {
+            border-color: #d8d345;
+            transform: rotate(45deg) scale(1.2);
+        }
+        .logoX img
+        {
+            margin: 25px 13px 0 12px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img id="Logo" src="Main_files/Logo.png">
+        <div class="soc_medias">
+            <a href="#"><img src="Main_files/YouTube.png"></a>
+            <a href="#"><img src="Main_files/VK.png"></a>
+            <a href="#"><img src="Main_files/Facebook.svg"></a>
+            <a href="#"><img src="Main_files/Twitter.png"></a>
+            <a href="#"><img src="Main_files/Twitch.png"></a>
+            <a href="#"><img src="Main_files/Instagram.png"></a>
+        </div>
+    </header>
+      <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="slider_message">
+            <div>
+            <h1>Доступно на всех платформах</h1>
+            <a href="#">Узнать больше</a>
+            </div>
+          </div>
+        <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="Main_files/Slide1.jpg"></div>
+        <div class="swiper-slide"><img src="Main_files/Slide2.jpg"></div>
+        <div class="swiper-slide"><img src="Main_files/Slide3.jpg"></div>
+        </div>
+    </div>
+        <div class="block_night_city">
+            <h1>Найт-Сити изменит тебя навсегда!</h1>
+            <div>
+                <article><strong>Cyberpunk 2077</strong> — приключенческая ролевая игра, действие которой происходит в мегаполисе Найт-Сити, где власть, роскошь и модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках устройства, позволяющего обрести бессмертие. Ты сможешь менять киберимпланты, навыки и стиль игры своего персонажа, исследуя открытый мир, где твои поступки влияют на ход сюжета и всё, что тебя окружает.</article>
+                <div class="night_city_images">
+                    <div class="left_images">
+                        <img src="Main_files/Image1.jpg">
+                        <img src="Main_files/Image2.jpg">
+                    </div>
+                <img src="Main_files/Image3.jpg" alt="town photo3">
+                </div>
+            </div>
+        </div>
+    <img src="Main_files/Transition_w-b_adapted.png" alt="transition white-black">
+        <div class="contest_block" style="background-color: black; margin-top: -5px; padding-bottom: 68px;">
+            <div style="display: flex; justify-content: start; align-items: end;">
+            <img src="Main_files/Sale.svg">
+            <h1 style="font-family: 'Archangelsk'; font-size: 62px; font-weight: 400; margin-left: 32px; margin-bottom: 13px; ">Играй и выигрывай!</h1>
+            </div>
+            <p style="margin-top: 26px; font-family: 'Roboto'; font-size: 18px; font-weight: 400; width: 80%; line-height: 34px;">Играй в <strong>Cyberpunk 2077</strong> и получи возможность выиграть консоль <strong>Xbox Series X</strong> или <strong>Sony PlayStation 5!</strong> Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)</p>
+            <div style="display: flex; justify-content: start;">
+                <div class="all_include" style="">
+                <div class="form_iclude" style="margin-top: 107px; width: 460px; display: flex; flex-direction: column;"></div>
+                    <div class="input-container">
+                        <label for="name"></label>
+                        <input type="text" id="name" placeholder="Как тебя зовут?" />
+                    </div>
+                    <div class="input-container">
+                        <label for="email"></label>
+                        <input type="text" id="email" placeholder="Твой e-mail"/>
+                    </div>
+                    <div class="dropzone" id="dropzone">
+                        <p style="font-family: 'Roboto'; font-weight: 100; text-decoration: underline; font-size: 18px; color: lightgray; margin-bottom: -8px;">Прикрепить скриншот</p>
+                        <p style="font-size: 12px; font-weight: 100; font-family: 'Roboto';">.png / .jpg / .pdf</p>
+                    </div>
+                        <input type="file" id="file-input" accept="image/*" style="display: none;">
+                        <img src="" alt="Uploaded Image" id="image-preview" style="display: none;">
+                        <button class="send-button">Отправить</button>
+                        <label style="display: flex; align-items: center; gap: 5px;">
+                        <input type="checkbox" name="acceptTerms" id="acceptTerms" style="margin-left: 0; margin-top: 13px; display: flex; appearance: none; border: 1px solid lightgray; width: 14px; height: 14px; cursor: pointer;">
+                        <span style="margin-left: 2px; margin-top: 12px; font-family: 'Roboto'; font-weight: 100; font-size: 12px; color: lightgray; ">Согласен на обработку персональных данных</span>
+                        </label>
+                </div>
+            <img src="Main_files/Consoles.png" style="display: flex; justify-content: end; margin-top: 30px; margin-left: 31px;">
+            </div>
+        </div>
+        <script>
+            const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('file-input');
+
+dropzone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropzone.classList.add('dragover');
+    dropzone.style.borderColor = 'yellow';
+});
+
+dropzone.addEventListener('dragleave', () => {
+    dropzone.classList.remove('dragover');
+    dropzone.style.borderColor = 'gray';
+});
+
+dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropzone.classList.remove('dragover');
+    dropzone.style.borderColor = 'gray';
+
+    const file = e.dataTransfer.files[0];
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = reader.result;
+            thumbnail.style.maxWidth = '100%';
+            thumbnail.style.maxHeight = '100%';
+
+            // Удаляем существующее содержимое внутри блока dropzone
+            dropzone.innerHTML = '';
+
+            // Добавляем превью внутрь блока dropzone
+            dropzone.appendChild(thumbnail);
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+dropzone.addEventListener('click', () => {
+    fileInput.click();
+});
+
+fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+            const thumbnail = document.createElement('img');
+            thumbnail.src = reader.result;
+            thumbnail.style.maxWidth = '20%';
+            thumbnail.style.maxHeight = '20%';
+
+            dropzone.innerHTML = '';
+            dropzone.appendChild(thumbnail);
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+        </script>          
+    </div>
+    <img src="Main_files/Transition_b-y_adapted.png" alt="transition black-yellow">
+    <div style="background-color: #F8F200; display: flex;">
+        <div style="margin-left: 320px; margin-top: 70px; display: flex; width: 39ic; flex-direction: column; margin-bottom: 70px;">
+                <img src="Main_files/HP_monitor.png">
+                <div class="logoX" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="Main_files/HP_logo.svg">
+                    <img src="Main_files/X.svg">
+                    <img src="Main_files/Logo 1.png">
+                </div>
+        </div>
+        <div style="width: 40.7%; margin-left: 33px;">
+            <h1 style="font-family: 'Archangelsk'; font-size: 62px; font-weight: 400; margin-top: 70px; margin-bottom: 13px;">Полное погружение вместе с HP</h1>
+            <p style="margin-top: 26px; font-family: 'Roboto'; font-size: 18px; font-weight: 400; width: 80%; line-height: 34px;">Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на любые события с временем отклика 1 мс и частотой в 144 Гц!</p>
+            <div>
+                <ul>
+                    <li>Яркие насыщенные цвета</li>
+                    <li>Кристальная четкость изображения</li>
+                    <li>Быстрые движения и плавный геймплей</li>
+                </ul>
+                <a href="#">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: black;">
+        <img src="Main_files/Gamecases.jpg">
+        <h1>Купить игру Cyberpunk 2077</h1>
+        <ul><strong>В комплект входит:</strong>
+            <li>Футляр с игровыми дисками</li>
+            <li>Футляр с кодом для загрузки игры с дисками (pc)</li>
+            <li>Справочник с информацией об игровом мире</li>
+        </ul>
+        <div><strong>Выберите платформу:</strong>
+            <img src="Main_files/PC.svg">
+            <img src="Main_files/xbox_one.svg">
+            <img src="Main_files/stadia.png">
+            <img src="Main_files/ps4.svg">
+        </div>
+    </div>
+    <footer>
+        <div class="footer_first_block">
+            <a href="#" id="footer_logo"><img src="Main_files/Logo.png"></a>
+            <a href="#" id="footer_logo"><img src="Main_files/CD_Projekt_logo 1.svg"></a>
+            <a href="#" id="footer_link">Лицензия</a>
+            <a href="#" id="footer_link">Политика конфиденциальности</a>
+        </div>
+        <div class="footer_last_block">
+            <span>CD PROJECT&#169;, Cyberpunk&#169;, Cyberpunk 2077&#169;</span>
+        </div>
+    </footer>
+</body>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500, //2500 - default
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+</html>
